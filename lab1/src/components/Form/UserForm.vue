@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
+  <div class="container my-5">
     <div class="row">
       <div class="col-md-6">
-        <div class="input-group mb-3">
-          <span class="input-group-text">Name</span>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
           <input
             type="text"
             id="name"
@@ -15,8 +15,8 @@
       </div>
 
       <div class="col-md-6">
-        <div class="input-group mb-3">
-          <span class="input-group-text">Age</span>
+        <div class="mb-3">
+          <label for="age" class="form-label">Age</label>
           <input
             type="number"
             id="age"
@@ -28,41 +28,39 @@
       </div>
     </div>
 
-    <div class="mt-3 role-button">
-      <div
-        class="btn-group"
-        role="group"
-        aria-label="Button group with nested dropdown"
-        id="role"
-      >
-        <div class="btn-group" role="group">
-          <button
-            type="button"
-            class="btn btn-danger dropdown-toggle role"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            {{ role }}
-          </button>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" @click="updateRole('Admin')">Admin</a>
-            </li>
-            <li>
-              <a class="dropdown-item" @click="updateRole('User')">User</a>
-            </li>
-          </ul>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label class="form-label">Role</label>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle w-100"
+              type="button"
+              id="roleDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{ role }}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="roleDropdown">
+              <li><a class="dropdown-item" @click="updateRole('Admin')">Admin</a></li>
+              <li><a class="dropdown-item" @click="updateRole('User')">User</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="mt-3">
-      <button type="submit" class="btn btn-success" @click="InsertUser()">
-        Submit
-      </button>
+    <div class="row">
+      <div class="col-md-6">
+        <button type="submit" class="btn btn-success w-100" @click="InsertUser()">
+          Submit
+        </button>
+      </div>
     </div>
   </div>
 </template>
+
 
 <script>
 export default {

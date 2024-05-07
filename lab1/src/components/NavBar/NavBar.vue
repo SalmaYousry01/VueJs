@@ -16,32 +16,36 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active text-light" aria-current="page" href="#"
-              >Home</a
+            <router-link
+              class="nav-link active text-light"
+              aria-current="page"
+              to="/"
+              >Home</router-link
             >
-            <!-- <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+            <router-link class="nav-link text-light" to="/posts"
+              >Posts</router-link
+            >
+            <router-link class="nav-link text-light" to="/add"
+              >Add Post</router-link
+            >
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Disabled</a
+            >
           </div>
         </div>
       </div>
     </nav>
   </nav>
-  <div>
-    <h1 class="mt-3">Add User</h1>
-  </div>
-  <user-form />
-  <AdminAndUserButtons />
-  <AdminsAndUsers />
 </template>
 
 <script>
-import UserForm from "../Form/UserForm.vue";
-import AdminsAndUsers from "../AdminsAndUsers/AdminsAndUsers.vue";
-import AdminAndUserButtons from "../AdminAndUserButtons.vue";
 export default {
   name: "NavBar",
-  components: { UserForm, AdminsAndUsers, AdminAndUserButtons },
+  components: {},
 };
 </script>
 

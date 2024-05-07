@@ -1,10 +1,14 @@
 <template>
-  <div class="d-flex container justify-content-center align-items-center gap-2">
+  <div class="d-flex container justify-content-center gap-2">
     <div class="col-6">
-      <button type="submit" class="btn btn-success" @click="filterUsers(User)">Users</button>
+      <button type="submit" class="btn btn-dark" @click="filterUsers(User)">
+        Users
+      </button>
     </div>
     <div class="col-6">
-      <button type="submit" class="btn btn-success" @click="filterUsers(Admin)">Admins</button>
+      <button type="submit" class="btn btn-dark" @click="filterUsers(Admin)">
+        Admins
+      </button>
     </div>
   </div>
 </template>
