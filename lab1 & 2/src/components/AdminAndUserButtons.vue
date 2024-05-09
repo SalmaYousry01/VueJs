@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="d-flex container justify-content-center gap-2">
     <div class="col-6">
       <button type="submit" class="btn btn-dark" @click="filterUsers(User)">
@@ -41,4 +41,4 @@ button {
   width: 70%;
   height: 40px;
 }
-</style>
+</style> -->

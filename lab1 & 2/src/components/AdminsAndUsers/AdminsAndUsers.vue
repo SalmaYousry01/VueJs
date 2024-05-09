@@ -1,4 +1,16 @@
 <template>
+  <div class="d-flex container justify-content-center gap-2">
+    <div class="">
+      <button type="submit" class="btn btn-dark" @click="filterUsers(User)">
+        Users
+      </button>
+    </div>
+    <div class="">
+      <button type="submit" class="btn btn-dark" @click="filterUsers(Admin)">
+        Admins
+      </button>
+    </div>
+  </div>
   <div class="table-container container w-100 mt-4">
     <table class="table w-100">
       <thead>
