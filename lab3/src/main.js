@@ -46,5 +46,8 @@ let router = createRouter({
 
 export default router;
 
-// to use StorePosts => use(StorePosts) and uncomment the import of StorePosts
+// to use Store
 createApp(App).use(router).use(Store).mount("#app");
+// to use StorePosts
+// createApp(App).use(router).use(StorePosts).mount("#app");
+
